@@ -3,5 +3,5 @@ Before do
 end
 
 at_exit do
-  @browser.quit
+  PageObject::PersistantBrowser.quit
 end
