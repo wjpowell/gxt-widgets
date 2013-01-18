@@ -3,8 +3,11 @@
 std_opts = "--no-source --color --format pretty"
 %>
 
-default: BROWSER=firefox <%= std_opts %>
-chrome: BROWSER=chrome <%= std_opts %>
-ie: BROWSER=ie <%= std_opts %>
-focus: BROWSER=firefox <%= std_opts %> --tags @focus
+default: BROWSER=firefox DRIVER=WATIR <%= std_opts %>
+sfirefox: BROWSER=firefox DRIVER=SELENIUM <%= std_opts %>
+wchrome: BROWSER=chrome DRIVER=WATIR <%= std_opts %>
+schrome: BROWSER=chrome DRIVER=SELENIUM <%= std_opts %>
+wie: BROWSER=ie DRIVER=WATIR <%= std_opts %>
+sie: BROWSER=ie DRIVER=SELENIUM <%= std_opts %>
+focus: BROWSER=firefox DRIVER=WATIR <%= std_opts %> --tags @focus
 
