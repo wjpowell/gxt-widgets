@@ -1,3 +1,4 @@
+require 'watir-webdriver'
 
 module PageObject
   module PersistantBrowser
@@ -5,8 +6,7 @@ module PageObject
     def self.get_browser
       if !@@browser
         target_browser = ENV['BROWSER'].to_sym
-        @@browser =  Watir::Browser.new target_browser if ENV['DRIVER'] == 'WATIR'
-        @@browser =  Selenium::WebDriver.for target_browser if ENV['DRIVER'] == 'SELENIUM'
+        @@browser =  Watir::Browser.new target_browser
       end
 
       @@browser
