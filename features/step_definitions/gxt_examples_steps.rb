@@ -8,29 +8,29 @@ When /^I have Local Pagination open$/ do
 end
 
 When /^I click next page$/ do
-  @page.gxt_pager_element.next
+  @page.pager_element.next
 end
 
 Then /^I should be on page "(\d+)"$/ do |page_expected|
-  @page.gxt_pager_element.page.should == page_expected
+  @page.pager_element.page.should == page_expected
 end
 
 When /^"([^"]*)" should be listed in the grid$/ do |name_expected|
-  @page.gxt_table_element[1][0].text.should == name_expected
+  @page.grid_element[1][0].text.should == name_expected
 end
 
 When /^I click last page$/ do
-  @page.gxt_pager_element.last
+  @page.pager_element.last
 end
 
 When /^I click on previous page$/ do
-  @page.gxt_pager_element.previous
+  @page.pager_element.previous
 end
 
 When /^I click on first page$/ do
-  @page.gxt_pager_element.first
+  @page.pager_element.first
 end
 
 When /^type "(\d+)" into the page box$/ do |page|
-  @page.gxt_pager_element.page=page
+  @page.pager_element.page=page
 end
