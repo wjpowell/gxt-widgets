@@ -23,6 +23,5 @@ module GxtWidgets
         raise ArgumentError, "expect platform to be :watir_webdriver or :selenium_webdriver"
       end
     end
-
   end
 end
