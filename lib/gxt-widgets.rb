@@ -3,6 +3,6 @@ require 'gxt-widgets/version'
 require 'gxt-widgets/gxt_grid'
 require 'gxt-widgets/gxt_pager'
 
-module GxtWidget
+module GxtWidgets
   
 end

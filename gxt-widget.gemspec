@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email = ["williamjpowell@gmail.com"]
   s.homepage = "http://github.com/"
   s.summary = %q{Page Object DSL for browser testing}
-  s.description = %q{Page Object DSL that works with both Watir and Selenium}
+  s.description = %q{Page Object DSL that works with both watir_webdriver and Selenium}
 
   s.rubyforge_project = "gxt-widget"
 

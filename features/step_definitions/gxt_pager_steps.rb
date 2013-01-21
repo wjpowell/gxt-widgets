@@ -1,10 +1,6 @@
-Given /^I am on the Gxt Examples page$/ do
-  @page = GxtSamplePageObject.new(@browser)
-  @page.navigate_to "http://gxtexamplegallery.appspot.com/"
-end
-
 When /^I have Local Pagination open$/ do
   @page.local_pagination_element.click
+  @page = LocalPaginationExample.new(@browser)
 end
 
 When /^I click next page$/ do
