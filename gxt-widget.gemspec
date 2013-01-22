@@ -3,14 +3,14 @@ $:.push File.expand_path("../lib", __FILE__)
 require "gxt-widgets/version"
 
 Gem::Specification.new do |s|
-  s.name = "gxt-widget"
-  s.version = GxtWidget::VERSION
+  s.name = "gxt-widgets"
+  s.version = GxtWidgets::VERSION
   s.platform = Gem::Platform::RUBY
-  s.authors = ["William Powell"]
+  s.authors = ["William J. Powell"]
   s.email = ["williamjpowell@gmail.com"]
-  s.homepage = "http://github.com/"
-  s.summary = %q{Page Object DSL for browser testing}
-  s.description = %q{Page Object DSL that works with both watir_webdriver and Selenium}
+  s.homepage = "http://github.com/wjpowell/gxt-widgets"
+  s.summary = %q{PageObject Widgets to simplify testing GXT applications}
+  s.description = %q{An Extension to Jeff (Cheezy) Morgan's PageObject gem which provides widgets for interacting with GXT controls found on the Gxt Example Gallery http://gxtexamplegallery.appspot.com/}
 
   s.rubyforge_project = "gxt-widget"
 
