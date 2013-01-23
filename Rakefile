@@ -4,9 +4,27 @@ require 'cucumber/rake/task'
 
 Bundler::GemHelper.install_tasks
 
-Cucumber::Rake::Task.new(:features, "Run all features") do |t|
-  t.profile = "default"
+RSpec::Core::RakeTask.new(:spec) do |spec|
+  spec.ruby_opts = "-I lib:spec"
+  spec.pattern = 'spec/**/*_spec.rb'
 end
 
+task :spec
+
+namespace :features do
+  Cucumber::Rake::Task.new(:watir_webdriver, "Run features with Watir") do |t|
+    t.profile = "watir"
+  end
+
+  Cucumber::Rake::Task.new(:selenium_webdriver, "Run features with Selenium") do |t|
+    t.profile = "selenium"
+  end
+
+  desc 'Run all features'
+  task :all => [:watir_webdriver, :selenium_webdriver]
+end
+
+desc 'Run all specs and cukes'
+task :test => ['spec', 'features:all']
 task :default => :features
 

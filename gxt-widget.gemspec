@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.summary = %q{PageObject Widgets to simplify testing GXT applications}
   s.description = %q{An Extension to Jeff (Cheezy) Morgan's PageObject gem which provides widgets for interacting with GXT controls found on the Gxt Example Gallery http://gxtexamplegallery.appspot.com/}
 
-  s.rubyforge_project = "gxt-widget"
+  s.rubyforge_project = "gxt-widgets"
 
   s.files = `git ls-files`.split("\n")
   s.test_files = `git ls-files -- {test,spec,features}/*`.split("\n")
@@ -20,6 +20,8 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_dependency 'page-object', '>= 0.8.2'
+  s.add_dependency 'watir-webdriver', '>= 0.6.2'
+  s.add_dependency 'selenium-webdriver', '>= 2.27.2'
 
   s.add_development_dependency 'rspec', '>= 2.12.0'
   s.add_development_dependency 'cucumber', '< 1.2.0'

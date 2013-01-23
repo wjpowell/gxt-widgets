@@ -1,6 +1,5 @@
 <%
-#std_opts = "--no-source --color --format Cucumber::Formatter::Fuubar"
-std_opts = "--no-source --color --format pretty"
+std_opts = "--no-source --color --format Cucumber::Formatter::Fuubar"
 %>
 
 default: BROWSER=firefox DRIVER=WATIR <%= std_opts %> --tags ~@selenium_only
