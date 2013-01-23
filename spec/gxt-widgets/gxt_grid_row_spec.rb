@@ -1,5 +1,5 @@
-require 'spec_helper'
 require 'page-object/elements'
+require "gxt-widgets/gxt_grid_row"
 
 describe GxtWidgets::GxtGridRow do
   let(:table_cell) { double('table_cell') }
