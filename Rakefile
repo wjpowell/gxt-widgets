@@ -28,5 +28,6 @@ end
 
 desc 'Run all specs and cukes'
 task :test => ['spec', 'features:all']
-task :default => :features
+
+task :default => :test
 
