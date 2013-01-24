@@ -1,4 +1,4 @@
-Feature: Table
+Feature: Gxt Grid
   In order to interact with tables
   Testers will need access and interrogation ability
 

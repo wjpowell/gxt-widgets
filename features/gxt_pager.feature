@@ -1,4 +1,4 @@
-Feature: Use Widgets to controls the gxt examples page
+Feature: Use Widgets to controls the gxt Local Pagination example
     As a gxt developer
     I want test widgets for Local pagination
     So that I can easily control control common components
