@@ -94,3 +94,13 @@ Then /^each column should contain "([^\"]*)"$/ do |text|
     column.text.should include text
   end
 end
+When /^the data for the second row should be "([^"]*)" and "([^"]*)"$/ do |col1, col2|
+  @element.first_row[0].text.should == col1
+  @element.first_row[1].text.should == col2
+end
+When /^I sort ascending by "([^"]*)"$/ do |column|
+  @element.header[column].sort_ascending
+end
+When /^I sort descending by "([^"]*)"$/ do |column|
+  @element.header[column].sort_descending
+end

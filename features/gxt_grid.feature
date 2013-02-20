@@ -59,3 +59,13 @@ Feature: Gxt Grid
   Scenario: Retrieve data from a table with an incorrect column header
     When I retrieve a GxtGrid widget
     Then the data for row "Chad Andrews" and column "Data20" should be nil
+
+  Scenario: Sort Ascending by Employee Name
+    When I retrieve a GxtGrid widget
+    When I sort ascending by "Employee Name"
+    And the data for the second row should be "Bell Snedden" and "Information Technology"
+
+  Scenario: Sort Descending by Employee Name
+    When I retrieve a GxtGrid widget
+    When I sort descending by "Employee Name"
+    And the data for the second row should be "Hollie Voss" and "General Administration"

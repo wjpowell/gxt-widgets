@@ -1,4 +1,5 @@
 require "gxt-widgets/gxt_grid_row"
+require 'gxt-widgets/gxt_grid_header_row'
 module GxtWidgets
   module Platforms
     module SeleniumWebDriver
@@ -10,6 +11,10 @@ module GxtWidgets
           idx = find_index_by_title(idx, eles) if idx.kind_of?(String)
           return nil unless idx
           Object::GxtWidgets::GxtGridRow.new(eles[idx], self, :platform => :selenium_webdriver)
+        end
+
+        def header
+          Object::GxtWidgets::GxtGridHeaderRow.new(table_rows[0], self, :platform => :selenium_webdriver)
         end
 
       end

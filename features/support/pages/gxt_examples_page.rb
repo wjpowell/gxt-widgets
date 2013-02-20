@@ -5,4 +5,5 @@ class GxtExamplesPage
 
   div(:basic_grid, :class => "label_basic_grid")
   div(:local_pagination, :class => "label_paging_grid")
+  div(:grouping_grid, :class => "label_grouping_grid")
 end
