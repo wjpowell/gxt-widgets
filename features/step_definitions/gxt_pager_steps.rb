@@ -1,5 +1,5 @@
 When /^I have Local Pagination open$/ do
-  @page..click
+  @page.local_pagination_element.click
   @page = LocalPaginationExample.new(@browser)
 end
 
