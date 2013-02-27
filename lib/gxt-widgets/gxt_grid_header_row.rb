@@ -1,9 +1,12 @@
 require 'gxt-widgets/gxt_header_cell'
 module GxtWidgets
   class GxtGridHeaderRow < GxtGridRow
-
-
     protected
+
+    def initialize_cell(row_element, platform)
+      Object::GxtWidgets::GxtHeaderCell.new(row_element, platform)
+    end
+
     def include_platform_for platform
       super
       if platform[:platform] == :watir_webdriver

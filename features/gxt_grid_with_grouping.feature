@@ -1,3 +1,4 @@
+@Ignore
 Feature: Gxt Grid With Grouping
   As a Gxt Developer
   I want to control a Gxt Grid with grouping using a Widget

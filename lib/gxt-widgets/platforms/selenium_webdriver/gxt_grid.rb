@@ -10,11 +10,11 @@ module GxtWidgets
           eles = table_rows
           idx = find_index_by_title(idx, eles) if idx.kind_of?(String)
           return nil unless idx
-          Object::GxtWidgets::GxtGridRow.new(eles[idx], self, :platform => :selenium_webdriver)
+          initialize_row(eles[idx], :platform => :selenium_webdriver)
         end
 
         def header
-          Object::GxtWidgets::GxtGridHeaderRow.new(table_rows[0], self, :platform => :selenium_webdriver)
+          initialize_header(table_rows[0], :platform => :selenium_webdriver)
         end
 
       end

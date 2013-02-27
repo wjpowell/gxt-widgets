@@ -62,10 +62,26 @@ Feature: Gxt Grid
 
   Scenario: Sort Ascending by Employee Name
     When I retrieve a GxtGrid widget
-    When I sort ascending by "Employee Name"
-    And the data for the second row should be "Bell Snedden" and "Information Technology"
+    And I open the "Employee Name" column menu
+    And I sort ascending
+    Then the data for the second row should be "Bell Snedden" and "Information Technology"
 
   Scenario: Sort Descending by Employee Name
     When I retrieve a GxtGrid widget
-    When I sort descending by "Employee Name"
-    And the data for the second row should be "Hollie Voss" and "General Administration"
+    And I open the "Employee Name" column menu
+    And I sort descending
+    Then the data for the second row should be "Hollie Voss" and "General Administration"
+
+  Scenario: Deselect a column from the Column Menu
+    When I retrieve a GxtGrid widget
+    And I open the "Department" column menu
+    And I deselect the "Department" column
+    Then The "Department" column should not appear in the table
+
+  Scenario: Deselect then select a column from the Column Menu
+    Given I retrieve a GxtGrid widget
+    And I open the "Department" column menu
+    And I deselect the "Department" column
+    And The "Department" column should not appear in the table
+    When I select the "Department" column
+    Then The "Department" column should appear in the table

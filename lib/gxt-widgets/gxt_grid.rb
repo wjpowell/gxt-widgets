@@ -10,6 +10,14 @@ module GxtWidgets
       ".//descendant::tr"
     end
 
+    def initialize_row(row_element, platform)
+      Object::GxtWidgets::GxtGridRow.new(row_element, self, platform)
+    end
+
+    def initialize_header(header_element, platform)
+      Object::GxtWidgets::GxtGridHeaderRow.new(header_element, self, platform)
+    end
+
     def include_platform_for platform
       super
       if platform[:platform] == :watir_webdriver

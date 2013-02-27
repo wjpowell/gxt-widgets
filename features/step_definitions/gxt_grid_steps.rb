@@ -95,12 +95,37 @@ Then /^each column should contain "([^\"]*)"$/ do |text|
   end
 end
 When /^the data for the second row should be "([^"]*)" and "([^"]*)"$/ do |col1, col2|
-  @element.first_row[0].text.should == col1
-  @element.first_row[1].text.should == col2
+  @element[1][0].text.should == col1
+  @element[1][1].text.should == col2
 end
-When /^I sort ascending by "([^"]*)"$/ do |column|
-  @element.header[column].sort_ascending
+
+When /^I sort ascending$/ do
+  @page.column_menu_element.sort_ascending
 end
-When /^I sort descending by "([^"]*)"$/ do |column|
-  @element.header[column].sort_descending
+
+When /^I sort descending$/ do
+  @page.column_menu_element.sort_descending
+end
+
+When /^I deselect the "([^"]*)" column$/ do |column_name|
+  @page.column_menu_element.open_column_selection_menu
+  @page.column_selection_menu_element.exclude_column(column_name)
+end
+
+Then /^The "([^"]*)" column should not appear in the table$/ do |column_name|
+  @element.header.each do |column_header|
+    column_header.text.should_not include column_name
+  end
+end
+
+When /^I select the "([^"]*)" column$/ do |column_name|
+  @page.column_menu_element.open_column_selection_menu
+  @page.column_selection_menu_element.include_column(column_name)
+end
+Then /^The "([^"]*)" column should appear in the table$/ do |column_name|
+  @element.header[column_name].exists?.should ==true
+end
+
+When /^I open the "([^"]*)" column menu$/ do |column|
+  @element.header[column].open_menu
 end
