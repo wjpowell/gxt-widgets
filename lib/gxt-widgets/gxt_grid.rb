@@ -1,18 +1,10 @@
 require 'watir-webdriver'
 require 'page-object/platforms/watir_webdriver/table'
+require 'gxt-widgets/row_container'
 module GxtWidgets
-  class GxtGrid < PageObject::Elements::Table
+  class GxtGrid < GxtWidgets::RowContainer
 
     PageObject.register_widget :gxt_grid, GxtGrid, 'div'
-
-    protected
-    def child_xpath
-      ".//descendant::tr"
-    end
-
-    def initialize_row(row_element, platform)
-      Object::GxtWidgets::GxtGridRow.new(row_element, self, platform)
-    end
 
     def initialize_header(header_element, platform)
       Object::GxtWidgets::GxtGridHeaderRow.new(header_element, self, platform)
