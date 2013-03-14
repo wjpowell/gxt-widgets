@@ -1,5 +1,6 @@
 require "gxt-widgets/gxt_grid_row"
 require 'gxt-widgets/gxt_grid_header_row'
+require 'gxt-widgets/platforms/watir_webdriver/row_container'
 module GxtWidgets
   module Platforms
     module WatirWebDriver
