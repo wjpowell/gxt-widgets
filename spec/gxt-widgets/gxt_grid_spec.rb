@@ -10,7 +10,7 @@ describe GxtWidgets do
     end
 
     context "for watir" do
-      let(:watir_gxt_grid) { GxtWidgets::GxtGrid.new(gxt_grid_element, :platform => :watir_webdriver) }
+      let(:watir_gxt_grid) { GxtWidgets::RowContainer.new(gxt_grid_element, :platform => :watir_webdriver) }
 
       before(:each) do
         gxt_grid_element.stub(:trs).and_return(gxt_grid_element)
@@ -57,7 +57,7 @@ describe GxtWidgets do
       before(:each) do
         gxt_grid_element.stub(:[]).and_return(gxt_grid_element)
       end
-      let(:selenium_gxt_grid) { GxtWidgets::GxtGrid.new(gxt_grid_element, :platform => :selenium_webdriver) }
+      let(:selenium_gxt_grid) { GxtWidgets::RowContainer.new(gxt_grid_element, :platform => :selenium_webdriver) }
 
       it "should return a table row when indexed" do
         gxt_grid_element.should_receive(:find_elements).with(:xpath, ".//descendant::tr").and_return(gxt_grid_element)

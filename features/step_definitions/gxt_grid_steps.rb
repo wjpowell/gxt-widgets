@@ -3,12 +3,12 @@ When /^I have the Basic Grid opened$/ do
   @page = BasicGridExample.new(@browser)
 end
 
-When /^I retrieve a GxtGrid widget$/ do
+When /^I retrieve a GxtHeaderGrid widget$/ do
   @element = @page.grid_element
 end
 
 
-When /^the GxtGrid should have "(\d+)" rows$/ do |rows|
+When /^the GxtHeaderGrid should have "(\d+)" rows$/ do |rows|
   @element.rows.should == rows.to_i
 end
 
@@ -28,15 +28,15 @@ Then /^the cell data should be '([^"]*)'$/ do |expected|
   @cell_data.should == expected
 end
 
-When /^I retrieve a GxtGrid widget by "([^\"]*)"$/ do |how|
+When /^I retrieve a GxtHeaderGrid widget by "([^\"]*)"$/ do |how|
   @element = @page.send "table_#{how}_element"
 end
 
-When /^I retrieve a GxtGrid widget by "([^\"]*)" and "([^\"]*)"$/ do |param1, param2|
+When /^I retrieve a GxtHeaderGrid widget by "([^\"]*)" and "([^\"]*)"$/ do |param1, param2|
   @element = @page.send "table_#{param1}_#{param2}_element"
 end
 
-When /^I retrieve a GxtGrid widget while the script is executing$/ do
+When /^I retrieve a GxtHeaderGrid widget while the script is executing$/ do
   @element = @page.table_element(:id => 'table_id')
 end
 

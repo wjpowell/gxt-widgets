@@ -9,6 +9,7 @@ require 'gxt-widgets/modules/selectable_column'
 require 'gxt-widgets/modules/sortable_column'
 require 'gxt-widgets/gxt_column_menu'
 require 'gxt-widgets/gxt_column_selection_menu'
+require 'gxt-widgets/gxt_grouping_grid'
 
 module GxtWidgets
   
