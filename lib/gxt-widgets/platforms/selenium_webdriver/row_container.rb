@@ -1,5 +1,6 @@
 require "gxt-widgets/gxt_grid_row"
 require 'gxt-widgets/gxt_grid_header_row'
+require 'page-object/platforms/selenium_webdriver/table'
 module GxtWidgets
   module Platforms
     module SeleniumWebDriver

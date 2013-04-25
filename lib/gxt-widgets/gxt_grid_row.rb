@@ -9,6 +9,9 @@ module GxtWidgets
       include_platform_for platform
     end
 
+    def parent
+
+    end
     protected
 
     def initialize_cell(row_element, platform)

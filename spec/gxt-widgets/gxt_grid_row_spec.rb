@@ -17,7 +17,7 @@ describe GxtWidgets::GxtGridRow do
         table_row[0].should be_instance_of PageObject::Elements::TableCell
       end
 
-      it "should retrun the number of columns" do
+      it "should return the number of columns" do
         table_row = GxtWidgets::GxtGridRow.new(table_row_driver, table, :platform => :selenium_webdriver)
         table_row_driver.should_receive(:find_elements).with(:xpath, ".//child::td|th").and_return(table_row_driver)
         table_row_driver.should_receive(:size).and_return(3)
