@@ -12,6 +12,7 @@ require 'gxt-widgets/gxt_column_menu'
 require 'gxt-widgets/gxt_column_selection_menu'
 require 'gxt-widgets/gxt_grouping_grid'
 require 'gxt-widgets/gxt_group_column_menu'
+require 'gxt-widgets/gxt_basic_tree'
 
 module GxtWidgets
   
