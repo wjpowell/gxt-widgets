@@ -6,12 +6,12 @@ Background:
   Given I am on the Gxt Examples page
   And I have the Basic Tree opened
 
-  Scenario: Retrieve a table
+  Scenario: Retrieve a tree
     When I retrieve a GxtTree widget
     Then I should know it is visible
 
   @watir_only
-  Scenario: Determine if a table exists
+  Scenario: Determine if a tree exists
     When I retrieve a GxtTree widget
     Then I should know it exists
 
